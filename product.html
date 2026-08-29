@@ -3,82 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-     <!--Tailwind CSS CDN Link-->
-     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product | Greenden</title>
+    <!--Tailwind CSS CDN Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        manrope: ['Manrope', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="text-gray-700">
      <!--Responsive Nav Bar-->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
-        <h1 class="text-2xl">Greenden</h1>
+        <h1 class="text-2xl font-bold">Greenden</h1>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-
             <ul class="flex gap-5 text-gray-600 hidden md:flex">
                 <li>
-                    <a class="hover:underline hover:text-black" href="index.html">Home</a>
+                    <a class="hover:underline hover:text-black font-semibold" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="hover:underline hover:text-black" href="product.html">Product</a>
+                    <a class="hover:underline hover:text-black font-semibold" href="product.html">Product</a>
                 </li>
                 <li>
-                    <a  class="hover:underline hover:text-black" href="contact.html">Contact</a>
+                    <a  class="hover:underline hover:text-black font-semibold" href="contact.html">Contact</a>
                 </li>
             </ul>
-
     </nav>
+
     <!-- Middle Section -->
-     <section class="text-center">
-         <h1 class="text-3xl font-bold mt-6 mb-3">Our Product</h1>
-         <input type="text" placeholder="Search for a product" class="border border-black p-3 m-2" style="width: 80%;"> 
-         <div class="grid grid-cols-2 md:grid-cols-4 mt-6 mb-6">
-            <div>
-                <img src="./Images/Best_Seller_1.png" alt="" class="inline hover:shadow-xl hover:transition hover:-translate-y-2 duration-300" >
-                <h1>Rose Plant</h1>
-                <p>$20</p>
+    <section class="text-center px-4">
+        <h1 class="text-3xl md:text-4xl font-bold mt-8 mb-2">Our Products</h1>
+        <p class="text-gray-500 mb-6">Browse our full collection of hand-picked plants, ready to ship to your door</p>
+
+        <div class="max-w-2xl mx-auto mb-8 flex items-center border border-gray-300 rounded-full px-4 py-2 shadow-sm focus-within:border-green-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <input type="text" placeholder="Search for a product" class="w-full bg-transparent focus:outline-none text-gray-600">
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 max-w-6xl mx-auto">
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/Best_Seller_1.png" alt="Rose Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Rose Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
             </div>
-             <div>
-                <img src="./Images/Lilly-bot.png" alt="" class="inline">
-                <h1>Lilly Plant</h1>
-                <p>$20</p>
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/Lilly-bot.png" alt="Lilly Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Lilly Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
             </div>
-             <div>
-                <img src="./Images/snake-bot.png" alt="" class="inline hover:shadow-xl hover:transition hover:-translate-y-2 duration-300" >
-                <h1>Snake Plant</h1>
-                <p>$20</p>
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/snake-bot.png" alt="Snake Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Snake Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
             </div>
-             <div>
-                <img src="./Images/Alocasia-bot.png" alt="" class="inline hover:shadow-xl hover:transition hover:-translate-y-2 duration-300" >
-                <h1>Alocasia Plant</h1>
-                <p>$20</p>
-            </div> 
-            <div class="mt-6">
-                <img src="./Images/Best_Seller_1.png" alt="" class="inline hover:shadow-xl hover:transition hover:-translate-y-2 duration-300" >
-                <h1>Rose Plant</h1>
-                <p>$20</p>
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/Alocasia-bot.png" alt="Alocasia Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Alocasia Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
             </div>
-             <div class="mt-6">
-                <img src="./Images/Lilly-bot.png" alt="" class="inline">
-                <h1>Lilly Plant</h1>
-                <p>$20</p>
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/Best_Seller_1.png" alt="Rose Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Rose Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
             </div>
-             <div class="mt-6">
-                <img src="./Images/snake-bot.png" alt="" class="inline hover:shadow-xl hover:transition hover:-translate-y-2 duration-300" >
-                <h1>Snake Plant</h1>
-                <p>$20</p>
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/Lilly-bot.png" alt="Lilly Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Lilly Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
             </div>
-             <div class="mt-6">
-                <img src="./Images/Alocasia-bot.png" alt="" class="inline hover:shadow-xl hover:transition hover:-translate-y-2 duration-300" >
-                <h1>Alocasia Plant</h1>
-                <p>$20</p>
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/snake-bot.png" alt="Snake Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Snake Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
             </div>
-         </div>    
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                <img src="./Images/Alocasia-bot.png" alt="Alocasia Plant" class="inline-block mx-auto">
+                <h1 class="font-semibold mt-3">Alocasia Plant</h1>
+                <p class="text-green-700 font-medium">$20</p>
+            </div>
+        </div>
     </section>
-     <!-- Footer Section -->
+
+    <!-- Footer Section -->
     <section class="bg-green-100 p-10 flex flex-col gap-5">
         <h1 class="text-4xl font-bold">Greenden</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, vel dignissimos. Dicta ut, delectus saepe aperiam vero et amet mollitia dignissimos assumenda ipsa. Rerum aspernatur quas perferendis, quibusdam aut ut.</p>
+        <p class="text-gray-700 max-w-2xl">Greenden brings nature indoors with a hand-picked collection of real and artificial plants, delivered fresh to your doorstep and backed by a team that genuinely loves what grows.</p>
         <p>&copy;2026 Greenden.com</p>
     </section>
 </body>
