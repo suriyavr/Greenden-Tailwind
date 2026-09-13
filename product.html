@@ -31,7 +31,7 @@
      <!--Responsive Nav Bar-->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl font-bold">Greenden</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+            <svg  id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             <ul class="flex gap-5 text-gray-600 hidden md:flex">
@@ -46,7 +46,23 @@
                 </li>
             </ul>
     </nav>
-
+      <!-- Side Nav Bar -->
+     <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%;height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600 ">
+                <li>
+                    <a class="hover:underline hover:text-black font-semibold" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black font-semibold" href="product.html">Product</a>
+                </li>
+                <li>
+                    <a  class="hover:underline hover:text-black font-semibold" href="contact.html">Contact</a>
+                </li>
+            </ul>
+     </section>
     <!-- Middle Section -->
     <section class="text-center px-4">
         <h1 class="text-3xl md:text-4xl font-bold mt-8 mb-2">Our Products</h1>
@@ -56,10 +72,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
-            <input type="text" placeholder="Search for a product" class="w-full bg-transparent focus:outline-none text-gray-600">
+            <input id="search" type="text" placeholder="Search for a product" class="w-full bg-transparent focus:outline-none text-gray-600">
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 max-w-6xl mx-auto">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 max-w-6xl mx-auto">
             <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300">
                 <img src="./Images/Best_Seller_1.png" alt="Rose Plant" class="inline-block mx-auto">
                 <h1 class="font-semibold mt-3">Rose Plant</h1>
@@ -109,5 +125,6 @@
         <p class="text-gray-700 max-w-2xl">Greenden brings nature indoors with a hand-picked collection of real and artificial plants, delivered fresh to your doorstep and backed by a team that genuinely loves what grows.</p>
         <p>&copy;2026 Greenden.com</p>
     </section>
+    <script src="product.js"></script>
 </body>
 </html>
